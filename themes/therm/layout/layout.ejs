@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="<%=theme.language%>">
+<head>
+    <title><%- page.title%></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-color@2.2.0/dist/jquery.color.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zui@1.10.0/dist/css/zui.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/zui@1.10.0/dist/js/zui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@waline/client"></script>
+    <%- css('css/therm.css') %>
+    <%- open_graph() %>
+
+</head>
+<body>
+<%- partial('partials/header.ejs') %>
+
+
+
+
+
+
+
+<div class="search-cover">
+<div class="panel search-rect">
+  <div class="panel-heading">
+
+<div class="input-group search">
+  <div class="input-control search-box search-box-circle has-icon-left has-icon-right search-example" id="searchboxExample">
+    <input id="inputSearchExample3" autocomplete="off" oninput="searchPost()" type="search" class="form-control search-input" placeholder="搜索...">
+    <label for="inputSearchExample3" class="input-control-icon-left search-icon"><i class="icon icon-search"></i></label>
+  </div>
+  <span class="input-group-btn">
+    <button class="btn" onclick="closeSearch()"><i class="icon icon-times"></i></button>
+  </span>
+</div>
+
+  </div>
+  <div class="panel-body">
+<ul class="search-ul">
+
+</ul>
+<p class="no-search-result">无搜索结果</p>
+<p class="searching">搜索中...</p>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="mainAndFooter">
+
+<div class="main col-xs-12 col-sm-12 col-md-11 center-block">
+  <div  class="no-padding col-xs-12 col-sm-8 col-md-8 indexArt center-block pjax">
+<%- body %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="siderbar col-sm-4 col-md-4">
+<div class="siderBody">
+  <% if(!is_post()){ %>
+<div class="information card">
+  <img class="avatar" src="<%- theme.avatar?theme.avatar.url:'' %>">
+  <div class="indexNick"><strong><%- theme.information?theme.information.name:'' %></strong><i style="color:<%-theme.gender=='man'?'blue':theme.gender=='woman'?'red':'' %>;margin-left:4px;font-size: 8px;" class="icon icon-<%-theme.gender=='man'?'mars':theme.gender=='woman'?'venus':''%> icon-12x"></i>
+    <div class="card-content text-muted"><%- theme.information?theme.information.describe:'' %></div>
+  </div>
+</div>
+<%}%>
+
+
+  <div class="indexTags">
+<div class="panel">
+  <div class="panel-heading">
+    <span>标签云</span>
+  </div>
+  <div class="panel-body">
+    <%  for(var item of site.tags.data){ %>
+    <a class="label" style="background: white;color: #484848;" href="<%- item.permalink %>"># <%- item.name %></a>
+    <% } %>   
+  </div>
+</div>
+</div>
+
+
+<% if(theme.ad&&!is_post()){ %>
+<div class="indexAd">
+    <a href="<%- theme.ad.link%>" target="_blank"><img src="<%- theme.ad.img %>"></a>
+</div>
+<%}%>
+
+<% if(theme.friend&&!is_post()){ %>
+<div class="indexFrided">
+<div class="panel">
+  <div class="panel-heading">
+    <span>我的友链</span>
+      <a class="getFriend" href=""><span>申请</span></a>
+  </div>
+  <div class="panel-body">
+    <%  for(var item of theme.friend){ %>
+    <a class="label" style="background: white;color: #484848;" href="<%- item.link %>"><%- item.name %></a>
+    <% } %>   
+  </div>
+</div>
+</div>
+<%}%>
+
+</div>
+</div>
+</div>
+
+
+<footer>
+  <div>
+    <p>由hexo&therm主题强力驱动</p>
+  </div>
+</footer>
+</div>
+<div>
+  <div class="goTop">dd</div>
+</div>
+</body>
+
+<script type="text/javascript">
+function searchPost(){
+  var searchText=$('.search-input').val()
+  if(searchText){
+    $('.search-ul').empty()
+    axios.get('/search.json').then(function(res){
+        var result=res.data.filter(function(item){
+          return item.title.indexOf(searchText)!=-1
+        })
+        if(result.length){
+          $('.no-search-result').hide()
+        for(var item of result){
+          var attachLi="<li><a href="+item.url+"><h4>"+item.title+"</h4></a><p>"+item.content+"</p></li>"
+            $('.search-ul').append(attachLi)
+        }
+      }else{
+        $('.no-search-result').show()
+      }
+    })
+  }
+} 
+
+
+function preventSlide(event){
+  event.preventDefault()
+}
+function openSearch(){
+  $('.search-cover').fadeIn(200)
+  $('body').css('overflow','hidden')
+window.addEventListener("touchmove", preventSlide,{passive: false})
+}
+
+function closeSearch(){
+  $('.search-cover').fadeOut(200)
+  $('body').css('overflow','visible')
+  $('.no-search-result').hide()
+  window.removeEventListener("touchmove", preventSlide,{passive: false})
+  
+}
+var goTop = function(){
+  var speed=window.scrollY/20
+  var time=setInterval(()=>{
+    if(window.scrollY==0){
+      clearInterval(time)
+    }
+    window.scrollTo(0,window.scrollY-speed)
+  },10)
+}
+$('.goTop').on('click',goTop)
+var flag=true
+var scroll=document.documentElement.scrollHeight-document.documentElement.clientHeight
+if(scroll>400){
+  $('.goTop').text(window.scrollY/scroll*100)
+}else{
+  console.log(Boolean('0'))
+  $('.goTop').css('display','none')
+}
+
+window.addEventListener('scroll',function(){
+  if (flag) {
+    setTimeout(function(){
+        $('.goTop').text(parseInt(window.scrollY/(document.documentElement.scrollHeight-document.documentElement.clientHeight)*100))
+        flag=true
+    },50)
+    flag=false
+  }
+
+})
+</script>
+</html>

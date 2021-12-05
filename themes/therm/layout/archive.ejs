@@ -1,0 +1,106 @@
+<div class="archive">
+  <% var firstTime=date(page.posts.data[0].date,'YYYY')%> 
+  <%for(var i=firstTime;i>=2020;i--){%>
+    <% var post=page.posts.data.filter(function(item){%>
+      <%var time=date(item.date,'YYYY') %>
+      <% return time==i.toString()%>
+    <%})%>
+    <%if(post.length==0){
+      break
+    }%>
+    <div class="archive-year">
+      <h1 class="archive-h1"><%-i%></h1>
+      <div class="archive-flex">
+        <%for(var item of post){%>
+          <ul class="archive-ul">
+            <li class="archive-li">
+              <a class="archive-title" href="<%-item.permalink%>"><h5><%-item.title%></h5></a>
+              <p><%-date(item.date,'YYYY年MM月DD--HH:mm:ss')%></p>
+            </li>
+          </ul>
+        <%}%>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+  <%}%>
+</div>
+
+<style type="text/css">
+.archive{
+  padding: 4px 12px;
+  background: white;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+.archive-h1{
+  margin-top: 8px;
+  margin-left: 8px;
+
+}
+  .archive-li{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .archive-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+.archive-flex a{
+  text-decoration: none;
+}
+  @media screen and (max-width: 767px){
+  .archive-ul{
+    padding: 0;
+    margin-bottom: 16px;
+    padding: 8px;
+    background: rgb(193 227 251 / 0%);
+    border-radius: 4px;
+    width: 49%;
+  }
+  .archive-li p{
+    font-size: 12px;
+  }
+  }
+
+  .archive-title h5{
+    margin: 2px 0 20px 0;
+    line-height: 16px;
+  }
+
+  @media screen and (min-width: 512px){
+  .archive-ul{
+    padding: 0;
+    margin-bottom: 16px;
+    padding: 8px;
+    background: rgb(193 227 251 / 0%);
+    border-radius: 4px;
+    width: 32.5%;
+  }
+  .archive-li p{
+    font-size: 12px;
+  }
+  .archive-flex >p{
+    width: 32.6%;
+  }
+  }
+  @media screen and (min-width: 992px){
+  .archive-ul{
+    padding: 0;
+    margin-bottom: 16px;
+    padding: 8px;
+    background: rgb(193 227 251 / 0%);
+    border-radius: 4px;
+    width: 32.6%;
+  }
+  .archive-li p{
+    font-size: 12px;
+  }
+  .archive-flex >p{
+    width: 32.6%;
+  }
+  }
+</style>

@@ -1,0 +1,66 @@
+<article id="post">
+  <section>
+  <h1><%=page.title%></h1>
+  <p class="time"><span style="margin-right: 16px;"><i class="icon icon-pencil text-primary"></i><%= date(page.date,'YYYY年MM月DD日 HH:mm:ss') %></span><span>总字数:<%-strip_html(page.content).replace(/\s/g,'').length%></span></p>
+<hr>
+  <div class="content"><%-page.content%></div>
+</section>
+  <footer>
+    <p class="text-muted">本文在知识共享 署名-相同方式共享 3.0协议之条款下提供。</p>
+    <ul class="pager pager-justify">
+<% if(page.prev){%>
+  <li class="previous"><a href="<%- page.prev.permalink %>"><i class="icon-angle-left"></i>&nbsp;上一篇</a></li>
+  <%}else{%>
+    <li class="previous disabled"><a href=""><i class="icon-angle-left"></i>&nbsp;没有了</a></li>
+  <%}%>
+
+<% if(page.next){%>
+  <li class="next"><a href="<%- page.next.permalink %>">下一篇&nbsp;<i class="icon-angle-right"></i></a></li>
+  <%}else{%>
+    <li class="next disabled"><a href="">没有了&nbsp;<i class="icon-angle-right"></i></a></li>
+  <%}%>
+    </ul>
+  </footer>
+  <div id="waline"></div>
+</article>
+<script type="text/javascript">
+  Waline({
+    el: '#waline',
+    serverURL: '<%-theme.waline%>'
+  })
+</script>
+
+<style type="text/css">
+  .content{
+    line-height: 32px;
+    padding: 0 4px;
+  }
+  .content img {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  padding: 16px;
+}
+#post .content {
+  font-size: 16px;
+}
+.time{
+  display: flex;
+  justify-content: space-between;
+}
+.time+hr{
+  margin: 4px 0 16px;
+}
+#post h1 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+  .pager a i{
+  padding-bottom: 2px;
+    font-size: 18px;
+  }
+  .pager>li>a{
+    border-radius: 2px!important;
+  }
+
+</style>

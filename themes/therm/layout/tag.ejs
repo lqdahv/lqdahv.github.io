@@ -1,0 +1,57 @@
+
+<div class="tagMain">
+
+      <div class="alert"><span>当前标签: </span><%- page.tag%></div>
+<% page.posts.data.forEach(function(post,index){ %>
+<div class="indexPerArt">
+  <%if(post.photos.length){%>
+    <div class="indexPerImg" style="background: url('<%- post.photos[0] %>');"></div>
+  <%}else{%>
+  
+    <%var imgurl=post.content.match(/http.+\/\/.+(png|jpg|jpeg|webp)/i)%>
+      <%if(imgurl){%>
+          <div class="indexPerImg" style="background: url(<%- imgurl[0] %>);"></div>
+      <%}else{%>
+          <div class="indexPerImg" style="background: url(<%- theme.img %>);"></div>
+      <%}%>
+  <%}%>
+  <div class="indexExcerptRight">
+    <a href="<%- post.permalink %>"><h3><%- post.title %></h3></a>
+    <%if(post.excerpt){%>
+      <div class="contentExcerpt"><%- post.excerpt %></div>
+    <%}else{%>
+      <div class="contentExcerpt"><%- trim(strip_html(post.content)) %></div>
+    <%}%>
+    <p class="authorExcerpt"><%- date(post.date, 'YYYY年M月D日')+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp"%>
+      <%if(post.categories.data[1]){%>
+        <%- post.categories.data[1].name %>
+      <% }else if(post.categories.data[0]){%>
+      <%- post.categories.data[0].name %>
+      <%}%>
+    </p>
+  </div>
+</div>
+<% }) %>
+  <!--上一页下一页-->
+<ul class="pager pager-justify">
+<% if(page.prev_link){%>
+  <li class="previous"><a href="<%- url_for(page.prev_link)%>" style="background:#4a6deb;color:white;font-size: 14px;"><i class="icon-angle-left"></i>&nbsp;上一页</a></li>
+  <%}else{%>
+    <li class="previous disabled"><a href=""><i class="icon-angle-left"></i>&nbsp;没有了</a></li>
+  <%}%>
+
+<% if(page.next_link){%>
+  <li class="next"><a href="<%- url_for(page.next_link)%>" style="background:#4a6deb;color:white">下一页&nbsp;<i class="icon-angle-right"></i></a></li>
+  <%}else{%>
+    <li class="next disabled"><a href="">没有了&nbsp;<i class="icon-angle-right"></i></a></li>
+  <%}%>
+</ul>
+</div>
+<style type="text/css">
+  .alert{
+    background: white;
+  }
+  .categoryMain .alert, .tagMain .alert{
+    border-radius: 2px;
+  }
+</style>

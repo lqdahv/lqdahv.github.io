@@ -1,0 +1,64 @@
+
+# html lang
+language: zh
+
+# main menu navigation
+menu:
+  home: '/'
+  About: '/about'
+  Contact: '/contact'
+  Archives: '/archives'
+  categories: '/categories'
+
+customMenu:
+  归档: '/archives'
+  自定义: '/custom'
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/therm.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/therm.js
+
+
+#avatar
+avatar:
+  url: https://www.bing.com/th?id=AMMS_914be83fb129b160afc872f3ae5f3f4d&w=110&h=110&c=7&rs=1&qlt=95&pcl=f9f9f9&o=6&cdv=1&pid=16.1
+
+#指定文章置顶,最多三个
+topTitle: ['九天']
+
+#头部logo
+headerLogo: https://www.bing.com/th?id=AMMS_914be83fb129b160afc872f3ae5f3f4d&w=110&h=110&c=7&rs=1&qlt=95&pcl=f9f9f9&o=6&cdv=1&pid=16.1
+
+#首页默认缩略图default
+img: https://img12.360buyimg.com/ddimg/jfs/t1/138535/34/20854/69769/618823dcE211c4352/4cc24bfdac378998.jpg
+#open ad
+ad:
+    title: 我是图片（广告|壁纸）模块
+    link: http://baidu.com
+    img: https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic193.nipic.com%2Ffile%2F20181125%2F1016936_135655496084_2.jpg&refer=http%3A%2F%2Fpic193.nipic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg
+
+friend: 
+      [
+          {
+            name: 我的小屋,
+            link: http://l.com
+          },
+          {
+            name: 你的小屋,
+            link: http://o.com
+          }
+
+      ]
+
+#首页右侧显示男女性别图标 可选值 man woman 或者不填即不显示
+gender: 'man'
+
+information:
+  name: 辣椒鱼仔
+  describe: 有些事情本身我们无法控制,只好控制自己
+
+waline: https://waline-therm-3522y3ib2-lqdahv.vercel.app

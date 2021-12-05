@@ -1,0 +1,101 @@
+<nav class="navbar" role="navigation">
+  <div class="container-fluid col-xs-12 col-sm-12 col-md-11 center-block">
+    <!-- 导航头部 -->
+
+    <div class="header-left">
+    <div class="navbar-header">
+      <!-- 移动设备上的导航切换按钮 -->
+      <button type="button" class="navbar-toggle">
+        <i class="icon icon-bars"></i>
+      </button>
+      <!-- 品牌名称或logo -->
+      <a class="navbar-brand" href="/"><%- image_tag(theme.headerLogo,{ height:'32px' }) %></a>
+      <button class="btn search-btn-mobile" onclick="openSearch()"><i class="icon icon-search"></i></button>
+    </div>
+    <!-- 导航项目 -->
+
+    <div class="menu">
+      <!-- 一般导航项目 -->
+      <ul>
+        <li class="home-li"><a onclick="openlink('/')">首页</a></li>
+
+
+        <li class="per-menu">
+          <a>分类<i class="icon icon-caret-down"></i></a>
+          <div class="child-menu">
+          <ul class="child-menu-ul">
+            <%  site.categories.data.forEach(function(item,index){ %>
+            <li><a onclick="openlink('<%- item.permalink %>')"><%- item.name %></a></li>
+            <% }) %> 
+          </ul>
+        </div>
+        </li>
+
+
+    <%if(theme.customMenu){%>
+      <% for(var item of Object.keys(theme.customMenu)){%>
+          <li class="other-menu"><a onclick="openlink('<%- config.url+theme.customMenu[item] %>')"><%- item %></a></li>
+      <%}%>
+    <%}%>
+        <!-- 导航中的下拉菜单 -->
+      </ul>
+    </div><!-- END .navbar-collapse -->
+  </div>
+
+  <button class="btn search-btn" onclick="openSearch()"><i class="icon icon-search"></i></button>
+</div>
+</nav>
+<script type="text/javascript">
+  $('.per-menu').click(function(event){
+    event.stopPropagation()
+    if($(this).children('.child-menu').is(':visible')){
+
+        $(this).children('.child-menu').fadeOut()
+    }else{
+      $('.child-menu').fadeOut(200)
+      $(this).children('.child-menu').fadeIn(200)
+    }
+  })
+$('.navbar-toggle').click(function(event){
+  event.stopPropagation()
+  if($('.menu').is(':visible')){
+    $('.menu,.child-menu').fadeOut(200)
+  }else{
+    $('.menu').fadeIn(200)
+  }
+})
+
+$('body').click(function(){
+
+  if(window.innerWidth<=767){
+    $('.menu,.child-menu').fadeOut(200)
+  }else{
+    $('.child-menu').fadeOut(200)
+  }
+})
+$('.menu-no-child').click(function(event){
+  event.stopPropagation()
+})
+
+function openlink(val){
+  window.location.href=val
+}
+</script>
+<script type="text/javascript">
+  $('.menu>ul>li a').each(function(){
+    var index=decodeURI(window.location.href).split('/').reverse()[1].indexOf($(this).text())
+    if(index!=-1&&decodeURI(window.location.href).includes('categories')){
+      $(this).css('color','red')
+    }
+  })
+  if(decodeURI(window.location.href).match(/\//g).length<=3){ //首页
+    $('.home-li>a').css('color','red')
+  }
+var index='<%-Object.keys(theme.customMenu).findIndex(function(item){ //自定义页  包含归档
+  return theme.customMenu[item]=='/'+path.split('/')[0]
+})%>'
+if(index!=-1){
+  $('.other-menu').eq(index).children().css('color','red')
+}
+
+</script>
