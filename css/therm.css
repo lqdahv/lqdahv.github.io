@@ -17,6 +17,7 @@ body {}
 .indexPerArt a {
   color: black;
   text-decoration: none;
+  word-break: break-all;
 }
 
 p {
@@ -37,20 +38,11 @@ p {
 .btn:focus,
 .btn:active,
 .btn:hover {
+  outline: none;
   background: none;
   border: none;
   box-shadow: none;
 }
-
-.btn:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.btn:active {
-  box-shadow: none;
-}
-
 
 .indexPerArt {
   display: flex;
@@ -86,7 +78,7 @@ p {
 .main {
   padding-top: 72px;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   margin: 0 auto;
   flex-grow: 1;
 }
@@ -155,7 +147,7 @@ p {
 @media screen and (max-width: 767px) {
   .main {
     display: flex !important;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .child-menu {
@@ -278,7 +270,7 @@ h3 {
 }
 
 #post {
-  padding: 24px 12px 20px 12px;
+  padding: 12px 12px 20px 12px;
   background: white;
   float: none;
   margin-bottom: 24px;
@@ -645,15 +637,7 @@ a.getFriend {
   display: none;
 }
 
-.v[data-class=v] .vpanel,
-.v[data-class=v] .vbtn {
-  border-radius: 4px;
-}
 
-.v[data-class=v] .vheader input:focus,
-.v[data-class=v] .veditor:focus {
-  background: none;
-}
 
   .indexFrided .panel-body a{
     padding: 6px 4px;
