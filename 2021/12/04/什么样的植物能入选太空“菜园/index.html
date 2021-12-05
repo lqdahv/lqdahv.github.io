@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>什么样的植物能入选太空“菜园'</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-color@2.2.0/dist/jquery.color.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zui@1.10.0/dist/css/zui.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/zui@1.10.0/dist/js/zui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@waline/client"></script>
+    
+<link rel="stylesheet" href="/css/therm.css">
+
+    <meta name="description" content="国际空间站种植的辣椒最近获得丰收 　　什么样的植物能入选太空“菜园” 　　近地轨道空间站微重力环境下，应种植那些摘了就能吃的即食性果蔬，因为微重力条件下烹饪加工食物难度很大；此外，还要考虑植物的易栽培性、易管理性，以及单位体积、单位能耗产出率等。 　　◎本报记者 唐 芳 　　今年7月，这批辣椒开始在国际空间站内种植，最近迎来了丰收。麦克阿瑟把辣椒切碎制作了一个玉米卷饼，还在社交媒体上发布图文直呼“">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么样的植物能入选太空“菜园&#39;">
+<meta property="og:url" content="http://localhost:4000/2021/12/04/%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E6%A4%8D%E7%89%A9%E8%83%BD%E5%85%A5%E9%80%89%E5%A4%AA%E7%A9%BA%E2%80%9C%E8%8F%9C%E5%9B%AD/index.html">
+<meta property="og:site_name" content="呼啦啦">
+<meta property="og:description" content="国际空间站种植的辣椒最近获得丰收 　　什么样的植物能入选太空“菜园” 　　近地轨道空间站微重力环境下，应种植那些摘了就能吃的即食性果蔬，因为微重力条件下烹饪加工食物难度很大；此外，还要考虑植物的易栽培性、易管理性，以及单位体积、单位能耗产出率等。 　　◎本报记者 唐 芳 　　今年7月，这批辣椒开始在国际空间站内种植，最近迎来了丰收。麦克阿瑟把辣椒切碎制作了一个玉米卷饼，还在社交媒体上发布图文直呼“">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-12-03T23:59:16.000Z">
+<meta property="article:modified_time" content="2021-12-03T23:59:49.846Z">
+<meta property="article:author" content="(_　_)。゜zｚＺ">
+<meta name="twitter:card" content="summary">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+<nav class="navbar" role="navigation">
+  <div class="container-fluid col-xs-12 col-sm-12 col-md-11 center-block">
+    <!-- 导航头部 -->
+
+    <div class="header-left">
+    <div class="navbar-header">
+      <!-- 移动设备上的导航切换按钮 -->
+      <button type="button" class="navbar-toggle">
+        <i class="icon icon-bars"></i>
+      </button>
+      <!-- 品牌名称或logo -->
+      <a class="navbar-brand" href="/"><img src="https://www.bing.com/th?id=AMMS_914be83fb129b160afc872f3ae5f3f4d&w=110&h=110&c=7&rs=1&qlt=95&pcl=f9f9f9&o=6&cdv=1&pid=16.1" height="32px"></a>
+      <button class="btn search-btn-mobile" onclick="openSearch()"><i class="icon icon-search"></i></button>
+    </div>
+    <!-- 导航项目 -->
+
+    <div class="menu">
+      <!-- 一般导航项目 -->
+      <ul>
+        <li class="home-li"><a onclick="openlink('/')">首页</a></li>
+
+
+        <li class="per-menu">
+          <a>分类<i class="icon icon-caret-down"></i></a>
+          <div class="child-menu">
+          <ul class="child-menu-ul">
+            
+            <li><a onclick="openlink('http://localhost:4000/categories/%E5%9B%BD%E5%86%85%E6%96%B0%E9%97%BB/')">国内新闻</a></li>
+            
+            <li><a onclick="openlink('http://localhost:4000/categories/%E7%94%B5%E5%BD%B1/')">电影</a></li>
+            
+            <li><a onclick="openlink('http://localhost:4000/categories/%E5%85%B6%E4%BB%96/')">其他</a></li>
+            
+            <li><a onclick="openlink('http://localhost:4000/categories/%E7%94%B5%E8%A7%86%E5%89%A7/')">电视剧</a></li>
+             
+          </ul>
+        </div>
+        </li>
+
+
+    
+      
+          <li class="other-menu"><a onclick="openlink('http://localhost:4000/archives')">归档</a></li>
+      
+          <li class="other-menu"><a onclick="openlink('http://localhost:4000/custom')">自定义</a></li>
+      
+    
+        <!-- 导航中的下拉菜单 -->
+      </ul>
+    </div><!-- END .navbar-collapse -->
+  </div>
+
+  <button class="btn search-btn" onclick="openSearch()"><i class="icon icon-search"></i></button>
+</div>
+</nav>
+<script type="text/javascript">
+  $('.per-menu').click(function(event){
+    event.stopPropagation()
+    if($(this).children('.child-menu').is(':visible')){
+
+        $(this).children('.child-menu').fadeOut()
+    }else{
+      $('.child-menu').fadeOut(200)
+      $(this).children('.child-menu').fadeIn(200)
+    }
+  })
+$('.navbar-toggle').click(function(event){
+  event.stopPropagation()
+  if($('.menu').is(':visible')){
+    $('.menu,.child-menu').fadeOut(200)
+  }else{
+    $('.menu').fadeIn(200)
+  }
+})
+
+$('body').click(function(){
+
+  if(window.innerWidth<=767){
+    $('.menu,.child-menu').fadeOut(200)
+  }else{
+    $('.child-menu').fadeOut(200)
+  }
+})
+$('.menu-no-child').click(function(event){
+  event.stopPropagation()
+})
+
+function openlink(val){
+  window.location.href=val
+}
+</script>
+<script type="text/javascript">
+  $('.menu>ul>li a').each(function(){
+    var index=decodeURI(window.location.href).split('/').reverse()[1].indexOf($(this).text())
+    if(index!=-1&&decodeURI(window.location.href).includes('categories')){
+      $(this).css('color','red')
+    }
+  })
+  if(decodeURI(window.location.href).match(/\//g).length<=3){ //首页
+    $('.home-li>a').css('color','red')
+  }
+var index='-1'
+if(index!=-1){
+  $('.other-menu').eq(index).children().css('color','red')
+}
+
+</script>
+
+
+
+
+
+
+
+<div class="search-cover">
+<div class="panel search-rect">
+  <div class="panel-heading">
+
+<div class="input-group search">
+  <div class="input-control search-box search-box-circle has-icon-left has-icon-right search-example" id="searchboxExample">
+    <input id="inputSearchExample3" autocomplete="off" oninput="searchPost()" type="search" class="form-control search-input" placeholder="搜索...">
+    <label for="inputSearchExample3" class="input-control-icon-left search-icon"><i class="icon icon-search"></i></label>
+  </div>
+  <span class="input-group-btn">
+    <button class="btn" onclick="closeSearch()"><i class="icon icon-times"></i></button>
+  </span>
+</div>
+
+  </div>
+  <div class="panel-body">
+<ul class="search-ul">
+
+</ul>
+<p class="no-search-result">无搜索结果</p>
+<p class="searching">搜索中...</p>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="mainAndFooter">
+
+<div class="main col-xs-12 col-sm-12 col-md-11 center-block">
+  <div  class="no-padding col-xs-12 col-sm-8 col-md-8 indexArt center-block pjax">
+<article id="post">
+  <section>
+  <h1>什么样的植物能入选太空“菜园&#39;</h1>
+  <p class="time"><span style="margin-right: 16px;"><i class="icon icon-pencil text-primary"></i>2021年12月04日 07:59:16</span><span>总字数:2694</span></p>
+<hr>
+  <div class="content"><p>国际空间站种植的辣椒最近获得丰收</p>
+<p>　　什么样的植物能入选太空“菜园”</p>
+<p>　　近地轨道空间站微重力环境下，应种植那些摘了就能吃的即食性果蔬，因为微重力条件下烹饪加工食物难度很大；此外，还要考虑植物的易栽培性、易管理性，以及单位体积、单位能耗产出率等。</p>
+<p>　　◎本报记者 唐 芳</p>
+<p>　　今年7月，这批辣椒开始在国际空间站内种植，最近迎来了丰收。麦克阿瑟把辣椒切碎制作了一个玉米卷饼，还在社交媒体上发布图文直呼“美味”。近日，国际空间站女航天员梅根·麦克阿瑟吃上了“太空”辣椒。</p>
+<p>　　如何给长期驻留空间站的航天员提供新鲜食物，一直是令人头疼的问题。世界各国一直没有停下太空种植实验的脚步。据不完全统计，目前已经有包括辣椒、草莓等在内的上百种植物种子，被先后送入国际空间站进行培育。这其中，辣椒是太空种植实验中最受欢迎的食物之一。</p>
+<p>　　为什么辣椒如此受青睐？什么样的植物适合太空种植？太空种出来的食物有没有辐射，可以直接吃吗？对此，科技日报记者专访了“月宫一号”总设计师、北京航空航天大学教授刘红。</p>
+<p>　　挑选在太空种植的植物有讲究</p>
+<p>　　“辣椒的维生素C含量比较高，甜椒、水果椒、菜椒等，吃起来口感清新；辣椒会开花，观赏度也高，气味清爽。”刘红对记者说，除此之外，辣椒也比较适合在太空环境下种植，辣椒苗植株小，占空间少，枝丫较为坚挺，株型在微重力下支撑性较好。不仅如此，辣椒还比较“皮实”，抗逆性较好，容易成活。</p>
+<p>　　当然，除了辣椒，适合长期在太空种植的植物也不少。刘红指出，在太空培育植物对航天员进行生命保障，首先要计算人类在太空中对热量、维生素、微量元素等营养物质的总体需求，再计算哪些植物搭配在一起能够满足这些需求；其次，近地轨道空间站微重力环境下，应种植那些摘了就能吃的即食性果蔬，因为微重力条件下烹饪加工食物难度很大；此外，还要考虑植物的易栽培性、易管理性，以及单位体积、单位能耗产出率等。</p>
+<p>　　“具体来说，对于围绕建设月球、火星基地等开展的载人深空探测活动，要保证人的热量摄入，需种植如小麦、大豆等粮食作物；蔬菜要多样化，以满足人的生理和心理需求，可种植生菜、小白菜、小油菜、辣椒、茄子、西红柿等，黄瓜是爬藤类植物，很占空间，但是清脆爽口，如果种植需牢牢固定住，防止藤蔓飘满舱；水果的话，种植草莓就不错，占空间小、挂果多。”刘红说。</p>
+<p>　　60年世界载人航天史，数百位航天员进入过太空，航天员长期执行太空任务已成为大势所趋。其中最久的一次，当属俄罗斯航天员瓦列里·波利亚科夫，他在国际空间站连续驻留了437天。航天员在太空中的食物补给问题，一直是人们关注的焦点。</p>
+<p>　　“早期的太空食物像牙膏一样，蔬果、肉类全部加工成糊状，挤出来吃。后来发展成预加工的整块食物，可以辨认出食物种类。现在，地面上的食物基本都能带上太空，不过除了新鲜水果，其他食物都是预加工的压缩食品、罐头食品、包装食品，吃之前大多要先加热。”刘红介绍道。</p>
+<p>　　“只吃包装好的长期储存食物，时间久了难免乏味。对于时间更长或者距离更远的探测任务而言，携带太多的天然食物，可能就会坏掉，所以需要另外一种生命保障系统。”刘红解释道，人的生命保障就是保障人对氧气、水和食物等的需求，因此在太空种植物非常重要，可以一举三得。“植物光合作用消耗二氧化碳，产生氧气。航天员日常工作生活会产生很多废水，废水净化之后可以灌溉植物。植物的蒸腾作用将水蒸发到空气中，可以冷凝制成优质的空气冷凝水。这种水净化后自然清新安全，人的心理接受度也更高。”刘红说。</p>
+<p>　　给“太空植物”浇水是门大学问</p>
+<p>　　近地轨道太空环境的特点是微重力。“电梯下坠的那一刻，就接近微重力的状态。”刘红说，“太空微重力环境对植物栽培工艺的影响非常大。植物生长的必要条件有光、温、水、气、肥，而在太空中给植物供水就是一项巨大的挑战。”</p>
+<p>　　植物缺水时才需要供水，在太空中也是一样，可是把握浇水时机却是个技术活。“地面上可使用传感器检测土壤湿度，做到及时浇水；空间站受微重力影响，水珠会附着在传感器上，导致传感器失灵，明明基质已经缺水，传感器却可能还显示水分充足。”刘红介绍说，所以空间站浇水是先把水全部抽出来，然后进行气水分离，最后再把水打进基质，定时进行这一整套循环操作。“这就导致虽然植物培养箱种植面积不大，配套的水泵、阀门、管道等附属物却是一套庞大的装置。”</p>
+<p>　　“现在‘太空种菜’已经不是特别高技术、高难度的事了。太空种植除了供水比较麻烦，其余的光、温、气、肥都有较好的解决方案。”刘红指出，目前最重要的是系统地研究清楚太空中植物生长的科学规律。以小麦为例，它在太空种植的产量跟地面上有什么区别？在太空中进行光合作用产生氧气和吸收二氧化碳有怎样的规律？生成物质的营养成分跟地球上有什么差别？这些都是各国科学家迫切想要探寻的问题。</p>
+<p>　　据悉，上世纪70年代起，陆续有科学家和航天员尝试在空间站内种菜，但是由于各种原因，许多尝试都失败了。经过几十年的不懈努力，俄罗斯航天员于2003年第一次吃到了在太空种出来的生菜，国际空间站2016年培育出第一朵在太空盛开的百日菊。近年来，世界各国在空间站的几百次种植实验，为开辟“太空菜园”打下了坚实基础。</p>
+<p>　　太空出品果实外形口感与地球出品相似</p>
+<p>　　不过，也有网友表示担心，在太空种的菜会受到辐射影响吗？种出来的食物可以直接食用吗？</p>
+<p>　　“空间站舱室内的辐射在安全值以内，太空植物也是在满足植物生长条件下种植出来的，所以果实的颜色、外形、口感跟地球上没有本质差异。但茄果类蔬菜的维生素C含量会更高一些，可能是舱室辐射比地球上略高，刺激了植物合成更多的抗氧化物质。”刘红指出，事实上，太空的微重力环境和辐射环境对植物都会有影响，世界各国都还在进行持续研究。</p>
+<p>　　刘红指出，太空种植的食物都要采集样品。以青椒为例，其叶子、根部或者整棵植株会被冷冻起来，带回地面进行分析。美国国家航空航天局（NASA）曾将生菜带回地球，检测其是否有对人体健康有害的微生物，最后证明是安全的。</p>
+<p>　　那么，把种子带到太空直接种植，与将种子进行太空实验后带回地球种植，收获的食物有何不同？</p>
+<p>　　刘红解释道，太空诱变育种是把种子带到太空，让种子暴露在外太空宇宙射线之下。宇宙射线会把大多数种子“杀死”，极少数幸免于难的种子再被带回到地球种植。比如，我国嫦娥五号曾搭载一批种子“上天”，在“奔月之旅”归来后，一部分水稻、苜蓿和燕麦种子已经在实验室里出苗，对进一步的科学研究具有重要价值。不过，即使是“幸免于难”，这些种子其实大多数也已是“残疾”。其中只有极少数会产生人类希望看到的性状，比如曾经有“太空种子”长出了巨型南瓜。</p>
+<p>　　“太空舱内种出的植物则完全不同。空间站舱室内本身有很好的防护，所以不会导致植物产生变异。”刘红说。</p>
+</div>
+</section>
+  <footer>
+    <p class="text-muted">本文在知识共享 署名-相同方式共享 3.0协议之条款下提供。</p>
+    <ul class="pager pager-justify">
+
+  <li class="previous"><a href="http://localhost:4000/2021/12/04/%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%AE%A3%E5%B8%83%E5%85%B1%E5%90%8C%E5%AE%9E%E6%96%BD%E2%80%9C%E4%B9%9D%E9%A1%B9%E5%B7%A5%E7%A8%8B%E2%80%9D/"><i class="icon-angle-left"></i>&nbsp;上一篇</a></li>
+  
+
+
+  <li class="next"><a href="http://localhost:4000/2021/12/04/%E4%B8%AD%E5%9B%BD%E9%9A%90%E5%BD%A2%E8%88%B0%E8%BD%BD%E6%9C%BA%E7%9A%84%E8%BF%99%E4%B8%AA%E5%BC%B1%E7%82%B9%E8%A2%AB%E5%85%8B%E6%9C%8D%E4%BA%86/">下一篇&nbsp;<i class="icon-angle-right"></i></a></li>
+  
+    </ul>
+  </footer>
+  <div id="waline"></div>
+</article>
+<script type="text/javascript">
+  Waline({
+    el: '#waline',
+    serverURL: 'https://waline-therm-3522y3ib2-lqdahv.vercel.app'
+  })
+</script>
+
+<style type="text/css">
+  .content{
+    line-height: 32px;
+    padding: 0 4px;
+  }
+  .content img {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  padding: 16px;
+}
+#post .content {
+  font-size: 16px;
+}
+.time{
+  display: flex;
+  justify-content: space-between;
+}
+.time+hr{
+  margin: 4px 0 16px;
+}
+#post h1 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+  .pager a i{
+  padding-bottom: 2px;
+    font-size: 18px;
+  }
+  .pager>li>a{
+    border-radius: 2px!important;
+  }
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="siderbar col-sm-4 col-md-4">
+<div class="siderBody">
+  
+
+
+  <div class="indexTags">
+<div class="panel">
+  <div class="panel-heading">
+    <span>标签云</span>
+  </div>
+  <div class="panel-body">
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E7%94%B5%E5%BD%B1/"># 电影</a>
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E5%86%92%E9%99%A9/"># 冒险</a>
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E7%94%B5%E8%A7%86%E5%89%A7/"># 电视剧</a>
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E5%86%AF%E7%BB%8D%E5%B3%B0/"># 冯绍峰</a>
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E8%8C%83%E4%B8%9E%E4%B8%9E/"># 范丞丞</a>
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E9%9F%A9%E5%9B%BD/"># 韩国</a>
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E5%96%9C%E5%89%A7/"># 喜剧</a>
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E7%88%B1%E6%83%85/"># 爱情</a>
+       
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+<footer>
+  <div>
+    <p>由hexo&therm主题强力驱动</p>
+  </div>
+</footer>
+</div>
+<div>
+  <div class="goTop">dd</div>
+</div>
+</body>
+
+<script type="text/javascript">
+function searchPost(){
+  var searchText=$('.search-input').val()
+  if(searchText){
+    $('.search-ul').empty()
+    axios.get('/search.json').then(function(res){
+        var result=res.data.filter(function(item){
+          return item.title.indexOf(searchText)!=-1
+        })
+        if(result.length){
+          $('.no-search-result').hide()
+        for(var item of result){
+          var attachLi="<li><a href="+item.url+"><h4>"+item.title+"</h4></a><p>"+item.content+"</p></li>"
+            $('.search-ul').append(attachLi)
+        }
+      }else{
+        $('.no-search-result').show()
+      }
+    })
+  }
+} 
+
+
+function preventSlide(event){
+  event.preventDefault()
+}
+function openSearch(){
+  $('.search-cover').fadeIn(200)
+  $('body').css('overflow','hidden')
+window.addEventListener("touchmove", preventSlide,{passive: false})
+}
+
+function closeSearch(){
+  $('.search-cover').fadeOut(200)
+  $('body').css('overflow','visible')
+  $('.no-search-result').hide()
+  window.removeEventListener("touchmove", preventSlide,{passive: false})
+  
+}
+var goTop = function(){
+  var speed=window.scrollY/20
+  var time=setInterval(()=>{
+    if(window.scrollY==0){
+      clearInterval(time)
+    }
+    window.scrollTo(0,window.scrollY-speed)
+  },10)
+}
+$('.goTop').on('click',goTop)
+var flag=true
+var scroll=document.documentElement.scrollHeight-document.documentElement.clientHeight
+if(scroll>400){
+  $('.goTop').text(window.scrollY/scroll*100)
+}else{
+  console.log(Boolean('0'))
+  $('.goTop').css('display','none')
+}
+
+window.addEventListener('scroll',function(){
+  if (flag) {
+    setTimeout(function(){
+        $('.goTop').text(parseInt(window.scrollY/(document.documentElement.scrollHeight-document.documentElement.clientHeight)*100))
+        flag=true
+    },50)
+    flag=false
+  }
+
+})
+</script>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>新冠病毒变异毒株Omicron：持续出现新增确诊，拜登收紧旅游限制措施</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-color@2.2.0/dist/jquery.color.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zui@1.10.0/dist/css/zui.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/zui@1.10.0/dist/js/zui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@waline/client"></script>
+    
+<link rel="stylesheet" href="/css/therm.css">
+
+    <meta name="description" content="美国东西两岸多地再有更多新冠病毒奥米克戎（Omicron）变种确诊病例，美国总统拜登宣布实施更严格的旅游限制措施。 拜登表示，他的计划当中“不包括关闭令或者封锁令”，也不会扩大强制接种疫苗范围。 加利福尼亚、科罗拉多、明尼苏达、纽约等州份以及夏威夷等地均检测出新增确诊病例，其中夏威夷政府部门指当地确诊者近期没有出行纪录。 各州卫生官员报告称，这些确诊者只有轻微症状。 据报，目前发现有这一新变种病例">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新冠病毒变异毒株Omicron：持续出现新增确诊，拜登收紧旅游限制措施">
+<meta property="og:url" content="http://localhost:4000/2021/12/04/%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92%E5%8F%98%E5%BC%82%E6%AF%92%E6%A0%AAOmicron%EF%BC%9A%E6%8C%81%E7%BB%AD%E5%87%BA%E7%8E%B0%E6%96%B0%E5%A2%9E%E7%A1%AE%E8%AF%8A/index.html">
+<meta property="og:site_name" content="呼啦啦">
+<meta property="og:description" content="美国东西两岸多地再有更多新冠病毒奥米克戎（Omicron）变种确诊病例，美国总统拜登宣布实施更严格的旅游限制措施。 拜登表示，他的计划当中“不包括关闭令或者封锁令”，也不会扩大强制接种疫苗范围。 加利福尼亚、科罗拉多、明尼苏达、纽约等州份以及夏威夷等地均检测出新增确诊病例，其中夏威夷政府部门指当地确诊者近期没有出行纪录。 各州卫生官员报告称，这些确诊者只有轻微症状。 据报，目前发现有这一新变种病例">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-12-03T23:55:56.000Z">
+<meta property="article:modified_time" content="2021-12-03T23:56:55.198Z">
+<meta property="article:author" content="(_　_)。゜zｚＺ">
+<meta name="twitter:card" content="summary">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+<nav class="navbar" role="navigation">
+  <div class="container-fluid col-xs-12 col-sm-12 col-md-11 center-block">
+    <!-- 导航头部 -->
+
+    <div class="header-left">
+    <div class="navbar-header">
+      <!-- 移动设备上的导航切换按钮 -->
+      <button type="button" class="navbar-toggle">
+        <i class="icon icon-bars"></i>
+      </button>
+      <!-- 品牌名称或logo -->
+      <a class="navbar-brand" href="/"><img src="https://www.bing.com/th?id=AMMS_914be83fb129b160afc872f3ae5f3f4d&w=110&h=110&c=7&rs=1&qlt=95&pcl=f9f9f9&o=6&cdv=1&pid=16.1" height="32px"></a>
+      <button class="btn search-btn-mobile" onclick="openSearch()"><i class="icon icon-search"></i></button>
+    </div>
+    <!-- 导航项目 -->
+
+    <div class="menu">
+      <!-- 一般导航项目 -->
+      <ul>
+        <li class="home-li"><a onclick="openlink('/')">首页</a></li>
+
+
+        <li class="per-menu">
+          <a>分类<i class="icon icon-caret-down"></i></a>
+          <div class="child-menu">
+          <ul class="child-menu-ul">
+            
+            <li><a onclick="openlink('http://localhost:4000/categories/%E5%9B%BD%E5%86%85%E6%96%B0%E9%97%BB/')">国内新闻</a></li>
+            
+            <li><a onclick="openlink('http://localhost:4000/categories/%E7%94%B5%E5%BD%B1/')">电影</a></li>
+            
+            <li><a onclick="openlink('http://localhost:4000/categories/%E5%85%B6%E4%BB%96/')">其他</a></li>
+            
+            <li><a onclick="openlink('http://localhost:4000/categories/%E7%94%B5%E8%A7%86%E5%89%A7/')">电视剧</a></li>
+             
+          </ul>
+        </div>
+        </li>
+
+
+    
+      
+          <li class="other-menu"><a onclick="openlink('http://localhost:4000/archives')">归档</a></li>
+      
+          <li class="other-menu"><a onclick="openlink('http://localhost:4000/custom')">自定义</a></li>
+      
+    
+        <!-- 导航中的下拉菜单 -->
+      </ul>
+    </div><!-- END .navbar-collapse -->
+  </div>
+
+  <button class="btn search-btn" onclick="openSearch()"><i class="icon icon-search"></i></button>
+</div>
+</nav>
+<script type="text/javascript">
+  $('.per-menu').click(function(event){
+    event.stopPropagation()
+    if($(this).children('.child-menu').is(':visible')){
+
+        $(this).children('.child-menu').fadeOut()
+    }else{
+      $('.child-menu').fadeOut(200)
+      $(this).children('.child-menu').fadeIn(200)
+    }
+  })
+$('.navbar-toggle').click(function(event){
+  event.stopPropagation()
+  if($('.menu').is(':visible')){
+    $('.menu,.child-menu').fadeOut(200)
+  }else{
+    $('.menu').fadeIn(200)
+  }
+})
+
+$('body').click(function(){
+
+  if(window.innerWidth<=767){
+    $('.menu,.child-menu').fadeOut(200)
+  }else{
+    $('.child-menu').fadeOut(200)
+  }
+})
+$('.menu-no-child').click(function(event){
+  event.stopPropagation()
+})
+
+function openlink(val){
+  window.location.href=val
+}
+</script>
+<script type="text/javascript">
+  $('.menu>ul>li a').each(function(){
+    var index=decodeURI(window.location.href).split('/').reverse()[1].indexOf($(this).text())
+    if(index!=-1&&decodeURI(window.location.href).includes('categories')){
+      $(this).css('color','red')
+    }
+  })
+  if(decodeURI(window.location.href).match(/\//g).length<=3){ //首页
+    $('.home-li>a').css('color','red')
+  }
+var index='-1'
+if(index!=-1){
+  $('.other-menu').eq(index).children().css('color','red')
+}
+
+</script>
+
+
+
+
+
+
+
+<div class="search-cover">
+<div class="panel search-rect">
+  <div class="panel-heading">
+
+<div class="input-group search">
+  <div class="input-control search-box search-box-circle has-icon-left has-icon-right search-example" id="searchboxExample">
+    <input id="inputSearchExample3" autocomplete="off" oninput="searchPost()" type="search" class="form-control search-input" placeholder="搜索...">
+    <label for="inputSearchExample3" class="input-control-icon-left search-icon"><i class="icon icon-search"></i></label>
+  </div>
+  <span class="input-group-btn">
+    <button class="btn" onclick="closeSearch()"><i class="icon icon-times"></i></button>
+  </span>
+</div>
+
+  </div>
+  <div class="panel-body">
+<ul class="search-ul">
+
+</ul>
+<p class="no-search-result">无搜索结果</p>
+<p class="searching">搜索中...</p>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="mainAndFooter">
+
+<div class="main col-xs-12 col-sm-12 col-md-11 center-block">
+  <div  class="no-padding col-xs-12 col-sm-8 col-md-8 indexArt center-block pjax">
+<article id="post">
+  <section>
+  <h1>新冠病毒变异毒株Omicron：持续出现新增确诊，拜登收紧旅游限制措施</h1>
+  <p class="time"><span style="margin-right: 16px;"><i class="icon icon-pencil text-primary"></i>2021年12月04日 07:55:56</span><span>总字数:1439</span></p>
+<hr>
+  <div class="content"><p>美国东西两岸多地再有更多新冠病毒奥米克戎（Omicron）变种确诊病例，美国总统拜登宣布实施更严格的旅游限制措施。</p>
+<p>拜登表示，他的计划当中“不包括关闭令或者封锁令”，也不会扩大强制接种疫苗范围。</p>
+<p>加利福尼亚、科罗拉多、明尼苏达、纽约等州份以及夏威夷等地均检测出新增确诊病例，其中夏威夷政府部门指当地确诊者近期没有出行纪录。</p>
+<p>各州卫生官员报告称，这些确诊者只有轻微症状。</p>
+<p>据报，目前发现有这一新变种病例的国家多达30个。</p>
+<p>目前仍不清楚高度变异毒株奥米克戎是否具有更高的传染性或者对疫苗更有抵抗力。</p>
+<p>美国发现首例Omicron变种病例<br>新冠变异毒株Omicron全球扩散，我们已经知道什么？<br>Biden: Omicron lockdown not needed for now习近平宣布再推10亿剂，非洲南部的新冠疫苗够用吗？<br>拜登的新措施<br>根据周四（12月2日）公布的措施细节，所有国际旅客，不论疫苗接种情况如何，都必须在出发前往美国前24小时内进行病毒检测。飞机、火车及巴士上须佩戴口罩的措施将延长至3月。</p>
+<p>美国政府将会通过私人保险公司向受保的数百万人提供免费上门检测，对于没有相关保险的人士则通过卫生中心和乡镇诊所等提供。</p>
+<p>冬季月份的管理计划还包括采取措施鼓励所有成年人接种疫苗加强针，包括以公共教育活动以及更有针对性的方式进行推广。</p>
+<p>超过4千万美国人已经接种了疫苗加强针，但是拜登表示，尚有近1亿合资格人士尚未接种。</p>
+<p>全美各地设立了数百家家庭疫苗诊所，以增加儿童和青少年的疫苗接种率。</p>
+<p>美国和其他多个国家均已对八个非洲南部国家实施了旅游禁令。卫生专家表示，旅游禁令将会为他们争取时间，对新变种进行研究。</p>
+<p>奥米克戎新变种的细节信息<br>纽约州州长凯西·霍赫尔（Kathy Hochul）周四表示，该州出现了五宗新变种病例。</p>
+<p>官员指，11月底，一名在曼哈顿出席一场会议的男子确诊感染新变种。</p>
+<p>其中一名确诊者是萨福克县一名已经接种疫苗的67岁女士。霍赫尔州长表示，她有咳嗽、头痛等轻微症状。另外四人则是在纽约市。</p>
+<p>周三的加州和周四的科罗拉多州各有一名确诊者被证实是近日从南非飞回美国。</p>
+<p>明尼苏达州一名奥米克戎阳性病例最近曾在纽约市出席一场为期三天的日本动漫会。</p>
+<p>在夏威夷的一名人士未接种疫苗，并且过去曾在2020年感染过新冠病毒，近日则未有出行史。卫生官员指，这显示当地可能已经出现社区感染。</p>
+<p>官员表示，夏威夷的确诊病例有轻微至中度的病症，正在家中隔离。</p>
+<p>Presentational grey line<br>分析－距离回归正常仍很遥远<br>BBC驻北美记者安东尼·泽克尔（Anthony Zurcher）</p>
+<p>随着奥米克戎变种出现，拜登又再带着新一轮阻止2019冠状病毒病（Covid-19）扩散的措施来到美国人民面前。</p>
+<p>不过，与他上一次的大动作不一样，政府这一次的计划在强制措施上比较轻——或许是反思了上一道命令造成的政治风暴，以及围绕他们的法律困境。</p>
+<p>这一次，拜登准备推动更多的检测，并且就算不强制也是鼓励所有美国人接种疫苗加强剂。</p>
+<p>他还特别提到了学校将保持开放，孩子们会留在教室——这是反思了去年长时间的关闭在郊区一些家长中间激起的不满，他们是民主党票仓的主力。</p>
+<p>今年较早前拜登上任总统时，他承认其任期的成功将很大程度上取决于如何阻击这次全球大流行疫情、让美国人一定程度上重回正常生活的能力。</p>
+<p>在一些早期的积极成效过后，新变种的出现——以及美国一些人当中对疫苗的不确定——令这种希望受挫，也带来经济和政治上的阻滞。</p>
+<p>周四的行动显示，拜登知道，距离重回正常生活的日子还很遥远。</p>
+</div>
+</section>
+  <footer>
+    <p class="text-muted">本文在知识共享 署名-相同方式共享 3.0协议之条款下提供。</p>
+    <ul class="pager pager-justify">
+
+  <li class="previous"><a href="http://localhost:4000/2021/12/04/%E5%B9%BF%E5%B7%9E%E7%99%BD%E4%BA%91%E5%8C%BA%E5%8F%91%E7%8E%B01%E4%BE%8B%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92%E6%A0%B8%E9%85%B8%E9%98%B3%E6%80%A7%E4%BA%BA%E5%91%98/"><i class="icon-angle-left"></i>&nbsp;上一篇</a></li>
+  
+
+
+  <li class="next"><a href="http://localhost:4000/2021/11/10/%E6%8C%87%E7%8E%AF%E7%8E%8B2/">下一篇&nbsp;<i class="icon-angle-right"></i></a></li>
+  
+    </ul>
+  </footer>
+  <div id="waline"></div>
+</article>
+<script type="text/javascript">
+  Waline({
+    el: '#waline',
+    serverURL: 'https://waline-therm-3522y3ib2-lqdahv.vercel.app'
+  })
+</script>
+
+<style type="text/css">
+  .content{
+    line-height: 32px;
+    padding: 0 4px;
+  }
+  .content img {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  padding: 16px;
+}
+#post .content {
+  font-size: 16px;
+}
+.time{
+  display: flex;
+  justify-content: space-between;
+}
+.time+hr{
+  margin: 4px 0 16px;
+}
+#post h1 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+  .pager a i{
+  padding-bottom: 2px;
+    font-size: 18px;
+  }
+  .pager>li>a{
+    border-radius: 2px!important;
+  }
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="siderbar col-sm-4 col-md-4">
+<div class="siderBody">
+  
+
+
+  <div class="indexTags">
+<div class="panel">
+  <div class="panel-heading">
+    <span>标签云</span>
+  </div>
+  <div class="panel-body">
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E7%94%B5%E5%BD%B1/"># 电影</a>
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E5%86%92%E9%99%A9/"># 冒险</a>
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E7%94%B5%E8%A7%86%E5%89%A7/"># 电视剧</a>
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E5%86%AF%E7%BB%8D%E5%B3%B0/"># 冯绍峰</a>
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E8%8C%83%E4%B8%9E%E4%B8%9E/"># 范丞丞</a>
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E9%9F%A9%E5%9B%BD/"># 韩国</a>
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E5%96%9C%E5%89%A7/"># 喜剧</a>
+    
+    <a class="label" style="background: white;color: #484848;" href="http://localhost:4000/tags/%E7%88%B1%E6%83%85/"># 爱情</a>
+       
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+<footer>
+  <div>
+    <p>由hexo&therm主题强力驱动</p>
+  </div>
+</footer>
+</div>
+<div>
+  <div class="goTop">dd</div>
+</div>
+</body>
+
+<script type="text/javascript">
+function searchPost(){
+  var searchText=$('.search-input').val()
+  if(searchText){
+    $('.search-ul').empty()
+    axios.get('/search.json').then(function(res){
+        var result=res.data.filter(function(item){
+          return item.title.indexOf(searchText)!=-1
+        })
+        if(result.length){
+          $('.no-search-result').hide()
+        for(var item of result){
+          var attachLi="<li><a href="+item.url+"><h4>"+item.title+"</h4></a><p>"+item.content+"</p></li>"
+            $('.search-ul').append(attachLi)
+        }
+      }else{
+        $('.no-search-result').show()
+      }
+    })
+  }
+} 
+
+
+function preventSlide(event){
+  event.preventDefault()
+}
+function openSearch(){
+  $('.search-cover').fadeIn(200)
+  $('body').css('overflow','hidden')
+window.addEventListener("touchmove", preventSlide,{passive: false})
+}
+
+function closeSearch(){
+  $('.search-cover').fadeOut(200)
+  $('body').css('overflow','visible')
+  $('.no-search-result').hide()
+  window.removeEventListener("touchmove", preventSlide,{passive: false})
+  
+}
+var goTop = function(){
+  var speed=window.scrollY/20
+  var time=setInterval(()=>{
+    if(window.scrollY==0){
+      clearInterval(time)
+    }
+    window.scrollTo(0,window.scrollY-speed)
+  },10)
+}
+$('.goTop').on('click',goTop)
+var flag=true
+var scroll=document.documentElement.scrollHeight-document.documentElement.clientHeight
+if(scroll>400){
+  $('.goTop').text(window.scrollY/scroll*100)
+}else{
+  console.log(Boolean('0'))
+  $('.goTop').css('display','none')
+}
+
+window.addEventListener('scroll',function(){
+  if (flag) {
+    setTimeout(function(){
+        $('.goTop').text(parseInt(window.scrollY/(document.documentElement.scrollHeight-document.documentElement.clientHeight)*100))
+        flag=true
+    },50)
+    flag=false
+  }
+
+})
+</script>
+</html>
