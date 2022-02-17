@@ -57,6 +57,7 @@ p {
 
 .indexPerArt h3,
 .authorExcerpt {
+  margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -125,13 +126,6 @@ p {
   margin-bottom: 24px;
 }
 
-.indexAd img {
-  width: 100%;
-  max-height: 286px;
-  object-fit: cover;
-}
-
-
 #myNiceCarousel a {
   display: block
 }
@@ -198,7 +192,7 @@ p {
     padding: 62px 12px 0;
   }
 
-  .per-menu {
+  .categories-menu {
     position: initial;
   }
 
@@ -240,10 +234,6 @@ p {
   padding-right: 0;
 }
 
-h3 {
-  margin-top: 6px;
-  margin-bottom: 0;
-}
 
 .contentExcerpt {
   overflow: hidden;
@@ -400,7 +390,7 @@ ul {
     border-radius: 0;
   }
 
-  .per-menu {
+  .categories-menu {
     position: relative;
   }
 }
@@ -652,9 +642,6 @@ a.getFriend {
 .siderBody{
   position: sticky;
   top: 56px;
-}
-.siderBody>div{
-  border-radius: 2px;
 }
 .goTop{
     position: fixed;
